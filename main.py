@@ -5,7 +5,12 @@ from urllib.parse import quote_plus
 app = FastAPI(
     title="Market Access API",
     version="1.0.0",
-    description="API pour rechercher des informations utiles aux analyses d'accès au marché des dispositifs médicaux en France."
+    description="API pour rechercher des informations utiles aux analyses d'accès au marché des dispositifs médicaux en France.",
+    servers=[
+        {
+            "url": "https://market-access-api.onrender.com"
+        }
+    ]
 )
 
 SOURCES = {
